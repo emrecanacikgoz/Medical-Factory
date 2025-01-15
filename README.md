@@ -71,7 +71,7 @@ Datasets used in continued pretraining, fine-tuning, and preference learning are
 CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
     --stage pt \
     --do_train \
-    --model_name_or_path mistralai/Mathstral-7B-v0.1 \
+    --model_name_or_path mistralai/Mistral-7B-v0.1 \
     --dataset path_to_dataset \
     --finetuning_type lora \
     --lora_target q_proj,v_proj \
@@ -92,7 +92,7 @@ CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
 CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
     --stage sft \
     --do_train \
-    --model_name_or_path mistralai/Mathstral-7B-v0.1 \
+    --model_name_or_path mistralai/Mistral-7B-v0.1 \
     --dataset path_to_dataset \
     --template default \
     --finetuning_type lora \
@@ -114,7 +114,7 @@ CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
 CUDA_VISIBLE_DEVICES=0 python src/train_bash.py \
     --stage dpo \
     --do_train \
-    --model_name_or_path mistralai/Mathstral-7B-v0.1 \
+    --model_name_or_path mistralai/Mistral-7B-v0.1 \
     --adapter_name_or_path path_to_sft_checkpoint \
     --create_new_adapter \
     --dataset path_to_dataset \
